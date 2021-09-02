@@ -14,15 +14,18 @@
     "default_title": "Chrome 扩展 demo",
     "default_popup": "index.html"
   },
+  "background": {
+		"scripts": ["assets/background.js"],
+    "persistent" : true
+	},
   "content_scripts": [
     {
       "matches": [
-        "https://movie.douban.com/subject/*",
-        "http://localhost:8080/*"
+        "https://movie.douban.com/subject/*"
       ],
       "run_at": "document_start",
       "js": [
-        "assets/infos/infos.js"
+        "assets/content-script.js"
       ]
     }
   ],
