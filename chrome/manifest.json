@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "chrome_extension_demo",
+  "version": "1.0.0",
+  "description": "Chrome 扩展 demo",
+  "author": "miracle",
+  "icons": {
+		"16": "assets/logo.png",
+		"48": "assets/logo.png",
+		"128": "assets/logo.png"
+	},
+  "browser_action": {
+    "default_icon": "assets/logo.png",
+    "default_title": "Chrome 扩展 demo",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://movie.douban.com/subject/*",
+        "http://localhost:8080/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "assets/infos/infos.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "inject.js"
+  ],
+  "homepage_url": "http://beta.jwks123.cn"
+}
