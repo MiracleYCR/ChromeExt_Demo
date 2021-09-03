@@ -2,22 +2,19 @@
   <div class="views-container">
     <span class="question">是否开启扩展插件?</span>
     <el-switch
-      style="display: block"
       class="switchBtn"
       width="72"
-      v-model="value"
+      v-model="openExtension"
       active-color="#0d8794"
       inactive-color="#1d2636"
     ></el-switch>
-    <span class="question">是否缓存电影详情信息?</span>
-    <el-button class="confirmBtn" round>缓存</el-button>
   </div>
 </template>
 
 <script setup>
   import { ref } from 'vue';
 
-  const value = ref(false);
+  const openExtension = ref(false);
 </script>
 
 <style lang="less">

@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { ElSwitch, ElButton } from 'element-plus'
+import { ElSwitch } from 'element-plus'
 
 import './assets/reset.css';
 import 'element-plus/dist/index.css';
@@ -10,7 +10,6 @@ import App from './App.vue';
 function registerExtensionPopup () {
   createApp(App)
     .use(ElSwitch)
-    .use(ElButton)
     .mount('#app');
 };
 

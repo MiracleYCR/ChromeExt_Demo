@@ -18,10 +18,12 @@
 		"scripts": ["assets/background.js"],
     "persistent" : true
 	},
+  "options_page": "index.html",
   "content_scripts": [
     {
       "matches": [
-        "https://movie.douban.com/subject/*"
+        "https://movie.douban.com/subject/*",
+        "http://localhost:8080/*"
       ],
       "run_at": "document_start",
       "js": [
